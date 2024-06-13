@@ -1,5 +1,34 @@
 import Notiflix from 'notiflix';
 
+const mainWrap = document.querySelector('#wrap');
+const sectionFirst = document.createElement('div');
+sectionFirst.classList.add('section');
+const sectionNext = document.createElement('div');
+sectionNext.classList.add('section');
+
+mainWrap.prepend(sectionFirst, sectionNext);
+
+const labelMain = document.createElement('label');
+labelMain.classList.add('expression');
+labelMain.textContent = `Натисни - 'Старт'`;
+
+const createBtnStart = document.createElement('button');
+createBtnStart.textContent = 'СТАРТ';
+createBtnStart.classList.add('start');
+createBtnStart.setAttribute('type', 'button');
+
+const createBtnCheck = document.createElement('button');
+createBtnCheck.textContent = 'ПЕРЕВІРИТИ';
+createBtnCheck.classList.add('check');
+createBtnCheck.setAttribute('type', 'button');
+
+const createInput = document.createElement('input');
+createInput.classList.add('item');
+createInput.setAttribute('placeholder', 'Введи відповідь');
+
+sectionFirst.prepend(labelMain, createBtnStart);
+sectionNext.prepend(createInput, createBtnCheck);
+
 const label = document.querySelector('.expression');
 const btnStart = document.querySelector('.start');
 const btnCheck = document.querySelector('.check');
