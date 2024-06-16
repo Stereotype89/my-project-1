@@ -1,4 +1,4 @@
-// import Notiflix from 'notiflix';
+import Notiflix from "notiflix";
 
 const mainWrap = document.querySelector("#wrap");
 const sectionFirst = document.createElement("div");
@@ -75,12 +75,24 @@ btnStart.addEventListener("click", (event) => {
   check = checkExpression({ ...aaa });
 });
 
-// btnCheck.addEventListener('click', event => {
-//   if (valueOfInput === check) {
-//     Notiflix.Report.success('МОЛОДЕЦЬ !!', 'Відповідь вірна! Натисни знову кнопку "СТАРТ"', 'OK');
-//   } else if (valueOfInput === 0) {
-//     Notiflix.Report.warning('УВАГА !!', 'Введи свою відповідь в поле! ;-)', 'OK');
-//   } else {
-//     Notiflix.Report.failure('УВАГА !!', 'Перевір правильність відповіді! :))', 'OK');
-//   }
-// });
+btnCheck.addEventListener("click", (event) => {
+  if (valueOfInput === check) {
+    Notiflix.Report.success(
+      "МОЛОДЕЦЬ !!",
+      'Відповідь вірна! Натисни знову кнопку "СТАРТ"',
+      "OK"
+    );
+  } else if (valueOfInput === 0) {
+    Notiflix.Report.warning(
+      "УВАГА !!",
+      "Введи свою відповідь в поле! ;-)",
+      "OK"
+    );
+  } else {
+    Notiflix.Report.failure(
+      "УВАГА !!",
+      "Перевір правильність відповіді! :))",
+      "OK"
+    );
+  }
+});
