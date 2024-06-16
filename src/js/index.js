@@ -1,4 +1,4 @@
-import Notiflix from "notiflix";
+import { Report } from "notiflix/build/notiflix-report-aio";
 
 const mainWrap = document.querySelector("#wrap");
 const sectionFirst = document.createElement("div");
@@ -77,22 +77,14 @@ btnStart.addEventListener("click", (event) => {
 
 btnCheck.addEventListener("click", (event) => {
   if (valueOfInput === check) {
-    Notiflix.Report.success(
+    Report.success(
       "МОЛОДЕЦЬ !!",
       'Відповідь вірна! Натисни знову кнопку "СТАРТ"',
       "OK"
     );
   } else if (valueOfInput === 0) {
-    Notiflix.Report.warning(
-      "УВАГА !!",
-      "Введи свою відповідь в поле! ;-)",
-      "OK"
-    );
+    Report.warning("УВАГА !!", "Введи свою відповідь в поле! ;-)", "OK");
   } else {
-    Notiflix.Report.failure(
-      "УВАГА !!",
-      "Перевір правильність відповіді! :))",
-      "OK"
-    );
+    Report.failure("УВАГА !!", "Перевір правильність відповіді! :))", "OK");
   }
 });
